@@ -1,0 +1,28 @@
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json #配置压缩支持的MIME TYPE
+      min-request-size: 2048  #配置压缩数据大小的下限
+    response:
+      enabled: true #配置响应GZIP压缩
+#  client:
+#    config:
+#      github-client:  #需要配置的FeignName
+#        connectTimeout: 5000  #连接超时时间
+#        readTimeout: 5000 #读超时时间设置
+#        loggerLevel: full #配置feign的日志级别
+#        errorDecoder: com.dylan.
+server:
+  port: 8011
+spring:
+  application:
+    name: feign-http
+logging:
+  level:
+    com.dylan.learn.service.HelloFeignService: debug
+

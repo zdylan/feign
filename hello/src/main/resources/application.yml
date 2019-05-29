@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: feign-hello
+logging:
+  level:
+    com.dylan.learn.servic.HelloFeignService: debug
